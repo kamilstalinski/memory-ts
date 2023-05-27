@@ -78,7 +78,7 @@ function App() {
 
   return (
     <>
-      {allMatched ? (
+      {allMatched && cards.length > 0 ? (
         <div className='win'>
           <h1>You won in {turns} turns!</h1>
           <button className='new-game' onClick={handleIsReady}>
