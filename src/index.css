@@ -1,0 +1,20 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #99d8ff;
+  background-image: radial-gradient(
+      at 66% 5%,
+      hsla(358, 90%, 73%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 92% 60%, hsla(126, 97%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 20% 2%, hsla(98, 92%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 28% 87%, hsla(90, 87%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 87% 52%, hsla(310, 79%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 20% 64%, hsla(229, 80%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 38% 21%, hsla(28, 61%, 79%, 1) 0px, transparent 50%);
+}

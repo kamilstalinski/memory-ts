@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.config {
+  width: 40vw;
+  max-width: 500px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.turns {
+  font-size: 2.5rem;
+}
+
+button.new-game {
+  background-color: #7dc4e8;
+  margin-top: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #ee8e8e;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #9f9f9f;
+  transition: scale ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+input {
+  width: 100px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+.board {
+  min-width: 600px;
+  max-width: 640px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10%;
+  gap: 8px;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10%;
+}
+
+.card.visible {
+  background: rgba(248, 234, 26, 0.497);
+}
+
+.card h2 {
+  font-size: 5rem;
+  color: rgb(66, 208, 255);
+  font-weight: normal;
+  opacity: 0;
+}
+
+.card.visible h2 {
+  opacity: 1;
+}
+
+.matched {
+  visibility: collapse;
+}
+
+.win {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.win h1 {
+  font-size: 3rem;
+  font-weight: normal;
+}
