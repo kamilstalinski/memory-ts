@@ -47,7 +47,7 @@ function App() {
   function resetTurn() {
     setChoiceOne(undefined);
     setChoiceTwo(undefined);
-    setTurns((prevTurns) => prevTurns + 1);
+    setTurns((prevTurns: number) => prevTurns + 1);
     setDisabled(false);
   }
 
@@ -56,16 +56,18 @@ function App() {
       setDisabled(true);
 
       if (choiceOne.value === choiceTwo.value) {
-        setCards((prevCards) => {
-          return prevCards.map((card) => {
-            if (card.value === choiceOne.value) {
-              return { ...card, matched: true };
-            } else {
-              return card;
-            }
+        setTimeout(() => {
+          setCards((prevCards: CardObject[]) => {
+            return prevCards.map((card: CardObject) => {
+              if (card.value === choiceOne.value) {
+                return { ...card, matched: true };
+              } else {
+                return card;
+              }
+            });
           });
-        });
-        resetTurn();
+          resetTurn();
+        }, 700);
       } else {
         setTimeout(() => resetTurn(), 700);
       }

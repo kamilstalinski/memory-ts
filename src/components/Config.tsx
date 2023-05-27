@@ -20,11 +20,24 @@ export default function Config({ handleIsReady, handleSetCards }: ConfigProps) {
       }
     }
   }
+
+  function handleKeyDown(event: React.KeyboardEvent) {
+    if (event.key === "Enter") {
+      handleStartGame();
+    }
+  }
+
   return (
     <div className='config'>
       <label>
         Choose the number of pairs!
-        <input ref={inputRef} name='pairs' type='number' max='10' />
+        <input
+          ref={inputRef}
+          name='pairs'
+          type='number'
+          max='10'
+          onKeyDown={handleKeyDown}
+        />
       </label>
       <button onClick={handleStartGame}>Start Game!</button>
     </div>
